@@ -1,12 +1,440 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфоліо Іванова</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="style/slick.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__top">
+          <a class="logo" href="#">
+            <img src="img/icons/logo.svg" alt="Логотип" />
+          </a>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#"> Обо мне </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#"> Навыки </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#"> Услуги </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#"> Портфолио </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#"> Отзывы </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#"> Контакты </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__content">
+          <h1 class="header__title">
+            Привет, я Иван Иванов
+            <span class="header__subtitle"> frontend-разработчик </span>
+          </h1>
+          <a class="header__link" href="#"> смотреть работы </a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="about section">
+        <div class="container">
+          <h2 class="title">Обо мне</h2>
+          <div class="about__content">
+            <p>
+              Приветствую всех на своём сайте! Меня зовут Иван, я из Киева. Занимаюсь
+              фронтенд-разработкой более года. До разработки занимался нелюбимым делом, ходил на
+              нелюбимую работу, не мог понять за что взяться, чтобы дело приносило удовольствие и
+              деньги, пока не наткнулся на один интересный курс.
+            </p>
+            <p>
+              С тех пор прошел огонь, воду и медные трубы. Учёба давалась по-разному: где-то легче,
+              где-то сложнее. Каждодневная работа над навыками и усердие, с которым я подходил к
+              обучению, уже через несколько месяцев принесли плоды - я взял первый заказ на
+              фрилансе. С отзывами клиентов и примерами работ можно ознакомиться ниже.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="skills section">
+        <div class="container">
+          <h2 class="title">Навыки</h2>
+          <div class="skills__content">
+            <img src="img/image-portfolio/avatar.jpg" alt="Фото розроботчика" />
+            <ul class="skills__progress">
+              <li class="skills__item">
+                <span class="skills__text"> html </span>
+                <div class="skills__gray">
+                  <span class="skills__blue" style="width: 85%"></span>
+                </div>
+              </li>
+              <li class="skills__item">
+                <span class="skills__text"> css </span>
+                <div class="skills__gray">
+                  <span class="skills__blue" style="width: 80%"></span>
+                </div>
+              </li>
+              <li class="skills__item">
+                <span class="skills__text"> js </span>
+                <div class="skills__gray">
+                  <span class="skills__blue" style="width: 60%"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="services section">
+        <div class="container">
+          <h2 class="title">Услуги</h2>
+          <ul class="services__content">
+            <li class="services__item services__item--project">
+              <h3 class="service__title">Вёрстка проектов</h3>
+              <div class="services__text">
+                <p>
+                  Сделаю качественную вёрстку вашего проекта по предоставленному макету или примеру
+                </p>
+              </div>
+            </li>
+            <li class="services__item services__item--cms">
+              <h3 class="service__title">Посадка на CMS</h3>
+              <div class="services__text">
+                <p>Интегрирую ваш проект в одну из популярных CMS</p>
+              </div>
+            </li>
+            <li class="services__item services__item--support">
+              <h3 class="service__title">Поддержка сайта</h3>
+              <div class="services__text">
+                <p>Гарантирую поддержку вашего сайта на протяжениии 30 дней после сдача проекта</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="portfolio">
+        <div class="container">
+          <div class="portfolio__top">
+            <h2 class="title">Мои работы</h2>
+            <ul class="portfolio__filters">
+              <li class="portfolio__filter">
+                <button class="portfolio__btn" data-filter="all">Все работы</button>
+              </li>
+              <li class="portfolio__filter">
+                <button class="portfolio__btn" type="button" data-filter=".category-a">
+                  Лендинги
+                </button>
+              </li>
+              <li class="portfolio__filter">
+                <button class="portfolio__btn" type="button" data-filter=".category-b">
+                  Корпоративные
+                </button>
+              </li>
+              <li class="portfolio__filter">
+                <button class="portfolio__btn" type="button" data-filter=".category-c">
+                  E-commerce
+                </button>
+              </li>
+            </ul>
+          </div>
+          <ul class="portfolio__content">
+            <li class="portfolio__item mix category-a">
+              <a
+                data-fancybox="images"
+                href=" img/portfolio/img1.jpg"
+                data-width="1024"
+                data-height="768"
+              >
+                <img class="portfolio__photo" src="img/portfolio/img1.jpg" alt="Река" />
+              </a>
+            </li>
+            <li class="portfolio__item mix category-c">
+              <a
+                data-fancybox="images"
+                href="img/portfolio/img2.jpg"
+                data-width="1024"
+                data-height="768"
+              >
+                <img class="portfolio__photo" src="img/portfolio/img2.jpg" alt="Мост" />
+              </a>
+            </li>
+            <li class="portfolio__item mix category-b">
+              <a
+                data-fancybox="portfolio__link"
+                href="img/portfolio/img3.jpg"
+                data-width="867"
+                data-height="680"
+              >
+                <img class="portfolio__photo" src="img/portfolio/img3.jpg" alt="Мост" />
+              </a>
+            </li>
+            <li class="portfolio__item mix category-a">
+              <a
+                data-fancybox="portfolio__link"
+                href="img/portfolio/img4.jpg"
+                data-width="867"
+                data-height="680"
+              >
+                <img class="portfolio__photo" src="img/portfolio/img4.jpg" alt="Заход сонца" />
+              </a>
+            </li>
+            <li class="portfolio__item mix category-c">
+              <a
+                data-fancybox="portfolio__link"
+                href="img/portfolio/img5.jpg"
+                data-width="867"
+                data-height="680"
+              >
+                <img class="portfolio__photo" src="img/portfolio/img5.jpg" alt="Пляж" />
+              </a>
+            </li>
+            <li class="portfolio__item mix category-c">
+              <a
+                data-fancybox="portfolio__link"
+                href="img/portfolio/img6.jpg"
+                data-width="867"
+                data-height="680"
+              >
+                <img class="portfolio__photo" src="img/portfolio/img6.jpg" alt="Скали" />
+              </a>
+            </li>
+          </ul>
+          <button class="btn portfolio__button">Загрузить еще</button>
+        </div>
+      </section>
+      <section class="reviews section">
+        <div class="container">
+          <h2 class="title">Отзывы клиентов</h2>
+          <div class="reviews__slider">
+            <div class="reviews__content">
+              <div class="content__review">
+                <img
+                  class="title__photo"
+                  src="img/image-portfolio/photo.jpg"
+                  alt="фото користувача"
+                />
+                <blockquote class="title__review">
+                  <cite class="title__name"> Марк Цукерберг </cite>
+                  Фантастика! Я всецело доволен работой этого специалиста. Быстро и качественно.
+                  Рекомендую!
+                </blockquote>
+              </div>
+              <a
+                class="content__video"
+                data-fancybox
+                data-width="640"
+                data-height="360"
+                href="http://youtu.be/H53JSXPXPxI"
+                style="background-image: url(img/image-portfolio/video-bg.jpg)"
+              >
+              </a>
+            </div>
+            <div class="reviews__content">
+              <div class="content__review">
+                <img
+                  class="title__photo"
+                  src="img/image-portfolio/photo.jpg"
+                  alt="фото користувача"
+                />
+                <blockquote class="title__review">
+                  <cite class="title__name"> Марк Цукерберг </cite>
+                  Фантастика! Я всецело доволен работой этого специалиста. Быстро и качественно.
+                  Рекомендую!
+                </blockquote>
+              </div>
+              <a
+                class="content__video"
+                data-fancybox
+                data-width="640"
+                data-height="360"
+                href="http://youtu.be/H53JSXPXPxI"
+                style="background-image: url(img/image-portfolio/video-bg.jpg)"
+              >
+              </a>
+            </div>
+            <div class="reviews__content">
+              <div class="content__review">
+                <img
+                  class="title__photo"
+                  src="img/image-portfolio/photo.jpg"
+                  alt="фото користувача"
+                />
+                <blockquote class="title__review">
+                  <cite class="title__name"> Марк Цукерберг </cite>
+                  Фантастика! Я всецело доволен работой этого специалиста. Быстро и качественно.
+                  Рекомендую!
+                </blockquote>
+              </div>
+              <a
+                class="content__video"
+                data-fancybox
+                data-width="640"
+                data-height="360"
+                href="http://youtu.be/H53JSXPXPxI"
+                style="background-image: url(img/image-portfolio/video-bg.jpg)"
+              >
+              </a>
+            </div>
+            <div class="reviews__content">
+              <div class="content__review">
+                <img
+                  class="title__photo"
+                  src="img/image-portfolio/photo.jpg"
+                  alt="фото користувача"
+                />
+                <blockquote class="title__review">
+                  <cite class="title__name"> Марк Цукерберг </cite>
+                  Фантастика! Я всецело доволен работой этого специалиста. Быстро и качественно.
+                  Рекомендую!
+                </blockquote>
+              </div>
+              <a
+                class="content__video"
+                data-fancybox
+                data-width="640"
+                data-height="360"
+                href="http://youtu.be/H53JSXPXPxI"
+                style="background-image: url(img/image-portfolio/video-bg.jpg)"
+              >
+              </a>
+            </div>
+            <div class="reviews__content">
+              <div class="content__review">
+                <img
+                  class="title__photo"
+                  src="img/image-portfolio/photo.jpg"
+                  alt="фото користувача"
+                />
+                <blockquote class="title__review">
+                  <cite class="title__name"> Марк Цукерберг </cite>
+                  Фантастика! Я всецело доволен работой этого специалиста. Быстро и качественно.
+                  Рекомендую!
+                </blockquote>
+              </div>
+              <a
+                class="content__video"
+                data-fancybox
+                data-width="640"
+                data-height="360"
+                href="http://youtu.be/H53JSXPXPxI"
+                style="background-image: url(img/image-portfolio/video-bg.jpg)"
+              >
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="statistics section">
+        <div class="container">
+          <ul class="statistics__items">
+            <li class="statistics__item statistics__item--work">
+              <span class="item__text">Выполненных работ</span>
+              <h2 class="item__number">56</h2>
+            </li>
+            <li class="statistics__item statistics__item--client">
+              <span class="item__text">Довольных клиентов</span>
+              <h2 class="item__number">23</h2>
+            </li>
+            <li class="statistics__item statistics__item--coffee">
+              <span class="item__text">Выпито чашек кофе</span>
+              <h2 class="item__number">477</h2>
+            </li>
+            <li class="statistics__item statistics__item--reviews">
+              <span class="item__text">Всего отзывов</span>
+              <h2 class="item__number">48</h2>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="container">
+          <h2 class="title">Контакты</h2>
+          <div class="contacts__content">
+            <address class="contacts__info">
+              <p>
+                Связаться со мной можно, воспользовавшись контактной формой, или напрямую по номеру
+                телефона, email, в соцсетях:
+              </p>
+              <div class="contacts__num">
+                <a class="info__tel" href="tel:+380501111111">+38 (050) 111 11 11</a>
+                <a class="info__email" href="mailto:frontend-monster@email.com"
+                  >frontend-monster@email.com
+                </a>
+              </div>
+              <ul class="info__socials">
+                <li class="info__social">
+                  <a class="info__row info__social--instagram" href="http://www.instagram.com"></a>
+                </li>
+                <li class="info__social">
+                  <a class="info__row info__social--facebook" href="http://www.facebook.com"></a>
+                </li>
+                <li class="info__social">
+                  <a class="info__row info__social--telegram" href="http://www.telegram.com"></a>
+                </li>
+              </ul>
+            </address>
+
+            <form class="contacts__sending" action="#">
+              <div class="sending__name">
+                <label class="sending__name-top" for="name"> Ваше имя </label>
+                <input
+                  class="sending__name-value"
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Иван"
+                  required
+                />
+              </div>
+              <div class="sending__tel">
+                <label class="sending__name-top" for="tel"> Номер телефона </label>
+                <input
+                  class="sending__tel-value"
+                  type="tel"
+                  id="tel"
+                  name="user_tel"
+                  placeholder="+380501111111"
+                  required
+                />
+              </div>
+              <label class="sending__name-top" for="message"> Ваше сообщение </label>
+              <textarea
+                class="sending__text-value"
+                id="message"
+                placeholder="Текст вашего сообщения"
+                required
+              ></textarea>
+              <input class="btn contact__button" type="submit" value="Отправить" name="send" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="logo" href="#">
+        <img src="img/icons/logo.svg" alt="Логотип" />
+      </a>
+    </footer>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/mixitup.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
